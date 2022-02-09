@@ -11,12 +11,12 @@ import (
 )
 
 type Card struct {
-	CardNumber     int
-	CVV            int
-	ExpMonth       int
-	ExpYear        int
-	CardHolderName string
-	CardHolderBin  string
+	CardNumber     int    `json:"cardnumber"`
+	CVV            int    `json:"cvv"`
+	ExpMonth       int    `json:"expmonth"`
+	ExpYear        int    `json:"expyear"`
+	CardHolderName string `json:"cardholdername"`
+	CardHolderBin  string `json:"cardholderbin"`
 }
 
 func getExp() (int, int) {

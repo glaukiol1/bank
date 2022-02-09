@@ -1,10 +1,10 @@
-package customer
+package bank
 
 import "crypto/rand"
 
 type Address struct {
-	Ticker  string
-	Address string
+	Ticker  string `json:"ticker"`
+	Address string `json:"address"`
 }
 
 func createAddresses() []Address {

@@ -1,4 +1,4 @@
-package customer
+package bank
 
 import (
 	"crypto/rand"
@@ -8,19 +8,17 @@ import (
 )
 
 type Customer struct {
-	Name      string
-	Bin       string
-	Addresses []Address
-	Cards     []*card.Card
+	Name      string       `json:"name"`
+	Bin       string       `json:"bin"`
+	Addresses []Address    `json:"addresses"`
+	Cards     []*card.Card `json:"cards"`
+	Balance   int          `json:"balance"`
+	Password  string       `json:"password"`
 }
 
 func createBin(name string) string {
 	RandomCrypto, _ := rand.Prime(rand.Reader, 220)
 	return RandomCrypto.String()[0:20] + "-" + strings.ReplaceAll(name, " ", "/") + "-" + RandomCrypto.String()[21:25]
-}
-
-func NewCustomer(name string) *Customer {
-	return &Customer{name, createBin(name), createAddresses(), []*card.Card{}}
 }
 
 func (customer *Customer) NewCard() (int, string) {
