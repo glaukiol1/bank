@@ -13,7 +13,6 @@ type Customer struct {
 	Bin        string       `json:"bin"`
 	Addresses  []Address    `json:"addresses"`
 	Cards      []*card.Card `json:"cards"`
-	Balance    int          `json:"balance"`
 	Password   string       `json:"password"`
 }
 

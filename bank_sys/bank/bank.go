@@ -7,7 +7,7 @@ type Bank struct {
 }
 
 func (bank *Bank) NewCustomer(name, password, documentId string) *Customer {
-	n := &Customer{name, documentId, createBin(name), createAddresses(), []*card.Card{}, 0, password}
+	n := &Customer{name, documentId, createBin(name), createAddresses(), []*card.Card{}, password}
 	bank.Customers = append(bank.Customers, n)
 	return n
 }
