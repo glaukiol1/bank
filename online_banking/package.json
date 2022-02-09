@@ -1,0 +1,19 @@
+ 
+{
+	"name": "expressjs-template",
+	"version": "0.0.1",
+	"description": "Made by @glaukiol1 on github",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"author": "@glaukiol1",
+	"license": "MIT",
+	"dependencies": {
+		"express": "*",
+		"body-parser": "*",
+		"cookie-parser": "*",
+		"pug": "*"
+	}
+}
+
