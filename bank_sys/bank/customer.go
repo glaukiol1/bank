@@ -8,12 +8,13 @@ import (
 )
 
 type Customer struct {
-	Name      string       `json:"name"`
-	Bin       string       `json:"bin"`
-	Addresses []Address    `json:"addresses"`
-	Cards     []*card.Card `json:"cards"`
-	Balance   int          `json:"balance"`
-	Password  string       `json:"password"`
+	Name       string       `json:"name"`
+	DocumentId string       `json:"documentid"`
+	Bin        string       `json:"bin"`
+	Addresses  []Address    `json:"addresses"`
+	Cards      []*card.Card `json:"cards"`
+	Balance    int          `json:"balance"`
+	Password   string       `json:"password"`
 }
 
 func createBin(name string) string {

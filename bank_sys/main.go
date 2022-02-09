@@ -9,7 +9,7 @@ import (
 
 func main() {
 	bank := bank.GagBank
-	glaukio := bank.NewCustomer("Glaukio L", "1234")
+	glaukio := bank.NewCustomer("Glaukio L", "1234", "0012345678900")
 	fmt.Println(glaukio.Bin)
 	glaukio.NewCard()
 	println(glaukio.Addresses[0].Address, glaukio.Addresses[0].Ticker)

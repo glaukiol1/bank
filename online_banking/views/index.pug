@@ -1,12 +1,17 @@
 
 html
 	head
-		title Test Server
+		title Gaga Bank
 		style
 			include ../public/css/index.css
 	body
-		h1 Hello!
-		p This is a test server! In the console you can see the javascript file output, and we also have styling!
-		a(href="https://github.com/glaukiol1") GitHub
+		#main
+			h1 Gaga Bank 
+			h3 Log In 
+			input#docidnr(type="text" placeholder="Document ID number")
+			br
+			input#password(type="password" placeholder="Password")
+			br
+			button#submit Submit
 		script(src="/js/index.js")
 
