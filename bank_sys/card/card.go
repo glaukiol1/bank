@@ -40,7 +40,6 @@ func (card *Card) parseData() string {
 func (card *Card) CardHash() string {
 	hasher := sha256.New()
 	hasher.Write([]byte(card.parseData()))
-	println(card.parseData())
 	sha := hasher.Sum(nil)
 	dst := make([]byte, hex.EncodedLen(len(sha)))
 	hex.Encode(dst, sha)
